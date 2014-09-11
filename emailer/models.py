@@ -54,9 +54,9 @@ class EmailTemplate(models.Model):
         body = base_template.render(Context({'content': content}))
 
         connection = get_connection()
-        connection.__dict__.update(**{
-            field: getattr(self.connection_profile, field)
-            for field in ('host', 'port', 'use_tls', 'username', 'password',)})
+        connection.__dict__.update(**dict(
+            (field, getattr(self.connection_profile, field))
+            for field in ('host', 'port', 'use_tls', 'username', 'password',)))
 
         # accept a single email as a string
         if not isinstance(to, (list, tuple)):
