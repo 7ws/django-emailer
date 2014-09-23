@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 
 setup(
@@ -11,7 +11,8 @@ setup(
     install_requires=[
         'django >= 1.5',
     ],
-    packages=['emailer'],
+    packages=find_packages(),
+    include_package_data=True,
     keywords=['django', 'email', 'smtp'],
     classifiers=[
         'Framework :: Django',
