@@ -10,6 +10,7 @@ class ConnectionProfileAdmin(admin.ModelAdmin):
 
         class Meta:
             model = ConnectionProfile
+            fields = '__all__'
             widgets = {
                 'password': forms.PasswordInput,
             }
