@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='django-emailer',
-    version='0.2',
+    version='0.2.1',
     author='Evandro Myller',
     author_email='emyller@7ws.co',
     description='Template based email sending with SMTP connection management',
